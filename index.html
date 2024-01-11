@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body{
+        background-color: #0c384d;
+      }
+      .imagen:hover {
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        box-shadow: 0px 0px 15px 15px #ec731e;
+        -webkit-box-shadow: 0px 0px 15px 15px #ec731e;
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transition: 2s;
+        -webkit-transition: 2s;
+      }
+
+      .imagen {
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" style="padding: 50px">
+      <div class="card" style="width: 19rem; align-items: center">
+        <div class="card-body">
+          <h5 class="card-title">Login</h5>
+          <div class="mb-3">
+            <label for="name" class="form-label">name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="name@example.com"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label">password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="password"
+            />
+          </div>
+
+          <input
+            class="btn btn-primary"
+            type="button"
+            value="ingresar"
+            onclick="login()"
+          />
+        </div>
+      </div>
+<hr>
+      <div class="contenedor">
+        <img
+          style="margin-top: 20px;"
+          class="imagen"
+          src="images/satellite.jpg"
+          alt="satelite"
+          width="300"
+          height="300"
+        />
+      </div>
+    </div>
+
+    <script>
+      function login() {
+        const name = document.getElementById("name").value;
+        const password = document.getElementById("password").value;
+
+        alert(`name: ${name}\npassword: ${password}`);
+      }
+    </script>
+  </body>
+</html>
