@@ -15,47 +15,14 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <style>
-      body{
-        background-color: #0c384d;
-      }
-      .imagen:hover {
-        border-radius: 50%;
-        -webkit-border-radius: 50%;
-        box-shadow: 0px 0px 15px 15px #ec731e;
-        -webkit-box-shadow: 0px 0px 15px 15px #ec731e;
-        transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        transition: 2s;
-        -webkit-transition: 2s;
-      }
-
-      .imagen {
-        border-radius: 50%;
-      }
-    </style>
+    <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="https://accounts.google.com/gsi/client" async></script>
+    <script src="script.js"></script>
   </head>
   <body>
-    <div class="container" style="padding: 50px">
+    <div class="container">
 
-      <div style="width: 19rem; align-items: center">
-        <div id="g_id_onload"
-          data-client_id="YOUR_GOOGLE_CLIENT_ID"
-          data-login_uri="https://your.domain/your_login_endpoint"
-          data-auto_prompt="false">
-        </div>
-        <div class="g_id_signin"
-          data-type="standard"
-          data-size="large"
-          data-theme="outline"
-          data-text="sign_in_with"
-          data-shape="rectangular"
-          data-logo_alignment="left">
-        </div>
-      </div>
-
-      <div class="card" style="width: 19rem; align-items: center">
+      <div class="card login_basic">
         <div class="card-body">
           <h5 class="card-title">Login</h5>
           <div class="mb-3">
@@ -85,9 +52,26 @@
             onclick="login()"
           />
         </div>
+
+        <div>
+          <div id="g_id_onload"
+            data-client_id="YOUR_GOOGLE_CLIENT_ID"
+            data-login_uri="https://your.domain/your_login_endpoint"
+            data-auto_prompt="false">
+          </div>
+          <div class="g_id_signin"
+            data-type="standard"
+            data-size="large"
+            data-theme="outline"
+            data-text="sign_in_with"
+            data-shape="rectangular"
+            data-logo_alignment="left">
+          </div>
+          <br>
+        </div>
       </div>
-<hr>
-      <div class="contenedor">
+
+      <div class="login_basic log" onclick="showLogin()">
         <img
           style="margin-top: 20px;"
           class="imagen"
@@ -97,15 +81,7 @@
           height="300"
         />
       </div>
+
     </div>
-
-    <script>
-      function login() {
-        const name = document.getElementById("name").value;
-        const password = document.getElementById("password").value;
-
-        alert(`name: ${name}\npassword: ${password}`);
-      }
-    </script>
   </body>
 </html>
